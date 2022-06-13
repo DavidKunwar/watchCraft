@@ -2,8 +2,14 @@ import React from "react"
 // import { Button } from "@mui/material"
 import Button from 'react-bootstrap/Button'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
+import { useNavigate } from 'react-router-dom'
 
 function Home(){
+    const navigate = useNavigate()
+    
+    function handleClick(){
+        navigate('/discover')
+    }
 
     return(
         <div className="home">
@@ -11,7 +17,7 @@ function Home(){
             <div className="home-text">
                 Watch Unlimited Movie Trailers
                 <br/>
-                <Button href='/discover/movies' className="get-started-btn" variant="danger" size="lg">Get Started <ArrowForwardIosIcon/></Button>
+                <Button onClick={handleClick} className="get-started-btn" variant="danger" size="lg">Get Started <ArrowForwardIosIcon/></Button>
             </div>
         </div>
     )

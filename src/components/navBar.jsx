@@ -18,6 +18,10 @@ function NavBar(){
         navigate(`/search/${searchText}` , {state: {searchText: searchText, pageNumber: 1}})
     }
 
+    function handleClick(){
+        navigate('/discover')
+    }
+
     return (
         <Navbar key='lg' expand='lg' className='nav-bar' bg="transparent" variant="dark">
             <Container>
@@ -26,7 +30,7 @@ function NavBar(){
                 <Navbar.Collapse id="navbarScroll">
                 <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
                     <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/discover/movies">Discover</Nav.Link>
+                    <Nav.Link onClick={handleClick}>Discover</Nav.Link>
                 </Nav>
                 <Form onSubmit={handleSubmit} className="d-flex">
                     <FormControl
