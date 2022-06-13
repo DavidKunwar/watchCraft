@@ -11,7 +11,7 @@ function Home(){
             <div className="home-text">
                 Watch Unlimited Movie Trailers
                 <br/>
-                <Button href='/discover' className="get-started-btn" variant="danger" size="lg">Get Started <ArrowForwardIosIcon/></Button>
+                <Button href='/discover/movies' className="get-started-btn" variant="danger" size="lg">Get Started <ArrowForwardIosIcon/></Button>
             </div>
         </div>
     )
