@@ -32,7 +32,7 @@ function Details(){
     return(
         <div className='movie-details'>
             { videoAvailable ? 
-            <iframe className='trailer' src={`https://www.youtube.com/embed/${trailerData.key}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            <iframe className='trailer' src={`https://www.youtube.com/embed/${trailerData.key}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             : <img className='trailer' src={`https://image.tmdb.org/t/p/w500${movieData.poster_path}`} /> }
 
             <div className='grid-container'>
